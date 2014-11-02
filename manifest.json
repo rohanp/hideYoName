@@ -1,0 +1,14 @@
+{
+	"manifest_version":2,
+	"name": "hideYoName",
+	"description": "This extension hides your username on websites",
+	"version": "1.0",
+	"content_scripts": [
+		{
+			"matches": ["http://www.reddit.com/*", "https://www.tumblr.com/*"],
+			"js": ["jquery.js", "script.js"]
+		}
+	]
+	
+
+}
