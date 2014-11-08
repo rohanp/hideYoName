@@ -1,22 +1,47 @@
 <!doctype html>
 <html>
-	<title> hideYoName Options</title>
-	<style>
-	body{
-		min-width: 100px;
-	}
-	</style>
-	<body>
-		Sites to automatically hide username:
-		<form action="">
-			<input type="checkbox" id="hideReddit"checked> Reddit <br>
-			<input type="checkbox" id="hideTumblr" checked> Tumblr <br>
-			<input type="checkbox" id="hideTwitter" checked> Twitter
-		</form>
-		
-		<button id="save">Save</button>
-		
-		<script src="jquery-2.1.1.min.js"></script>
-		<script src="options.js"></script>
-	</body>
+<title>hideYoName Options</title>
+<style>
+body {
+    min-width: 100px;
+}
+form {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+div {
+    background-color: #2b8df1;
+    color: #FFFFFF;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    border-radius: 1px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+</style>
+
+<body>
+    <span>Hide name on:</span>
+    <form action="">
+        <input type="checkbox" id="hideReddit" checked>Reddit
+        <br>
+        <input type="checkbox" id="hideTumblr" checked>Tumblr
+        <br>
+        <input type="checkbox" id="hideTwitter" checked>Twitter
+    </form>
+
+    <div id="save">Save</div>
+
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="options.js"></script>
+</body>
+
 </html>
