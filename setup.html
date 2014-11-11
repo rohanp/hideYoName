@@ -9,7 +9,12 @@ form {
     margin-top: 5px;
     margin-bottom: 5px;
 }
-div {
+
+div{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.button{
     background-color: #2b8df1;
     color: #FFFFFF;
     width: 50px;
@@ -17,7 +22,7 @@ div {
     text-align: center;
     vertical-align: middle;
     display: table-cell;
-    border-radius: 1px;
+    border-radius: 4px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -26,19 +31,82 @@ div {
     user-select: none;
     cursor: pointer;
 }
+
+#adv{
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+}
+#name{
+    width: 50px;
+}
+#linkKarma{
+    width: 30px;
+}
+
+#commentKarma{
+    width: 30px;
+}
+
+.input{
+    float:left;
+}
+
+.link{
+    color: #0000FF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.expand{
+    padding: 0px;
+    margin: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+.expand td{
+    padding: 0px;
+    margin: 0px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+}
+
+
+table{
+    border: none;
+}
+td{
+    float:left;
+}
 </style>
 
 <body>
     <span>Hide name on:</span>
     <form action="">
-        <input type="checkbox" id="hideReddit" checked>Reddit
-        <br>
-        <input type="checkbox" id="hideTumblr" checked>Tumblr
-        <br>
-        <input type="checkbox" id="hideTwitter" checked>Twitter
+        <table>
+            <tr style="margin-left: 0px">
+                <td> <input type="checkbox" id="hideReddit" class="input" checked> Reddit </td>
+                <td> <a id="adv" class="link"> adv.</a> </td>
+            </tr>
+            <tr class="expand">
+                <td> <input type="textbox" id="name" placeholder="enter alias" class="input"> </td>
+                <td> <input type="textbox" id="linkKarma" placeholder="link karma" class="input"> </td>
+                <td> <input type="textbox" id="commentKarma" placeholder="comment karma" class="input"> </td>
+            </tr>
+            <tr>
+                <td> <input  type="checkbox" id="hideTumblr" checked>Tumblr </td>
+                <td></td>
+                <td> </td>
+            </tr>
+            <tr>
+                <td> <input type="checkbox" id="hideTwitter" checked>Twitter </td>
+                <td></td>
+            </tr>
+        </table>
     </form>
 
-    <div id="save">Save</div>
+    <div id="save" class="button">Save</div>
 
     <script src="jquery-2.1.1.min.js"></script>
     <script src="options.js"></script>
