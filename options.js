@@ -54,7 +54,7 @@ $(document).ready(function() {
 	});
 
 	$('#adv').click(function() {
-		$('body').css('min-width', '150px');
+		$('body').css('min-width', '140px');
 		$('#name').toggle();
 		$('#linkKarma').toggle();
 		$('#commentKarma').toggle();

@@ -13,10 +13,8 @@ chrome.storage.sync.get({
     }, function(items) {
     	//Reddit
     	if(items.hideReddit){
-			//$('.user').css("visibility", "hidden");
-			//$('.user a').attr('href','nice try!');
-			$('.commentingAs').html(items.altName);
-			$('.user a').html(items.altName);
+			$('.commentingAs').html("Commenting as: " + items.altName);
+			$('.user a').not('.login-required').html(items.altName);
 			$(".userkarma a[title='link karma']").html(items.linkKarma);
 			$(".userkarma a[title='comment karma']").html(items.commentKarma);
 		}
